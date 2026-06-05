@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kafa?</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #ffe6f0, #fff);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.card {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    width: 300px;
+}
+
+h1 {
+    font-size: 22px;
+}
+
+button {
+    padding: 12px 20px;
+    font-size: 16px;
+    margin: 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#yes {
+    background: #4CAF50;
+    color: white;
+}
+
+#no {
+    background: #f44336;
+    color: white;
+    position: relative;
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+    <h1>Želiš li ići na kafu sa mnom? ☕❤️</h1>
+    
+    <button id="yes" onclick="alert('Dogovoreno! ☕😍')">Da</button>
+    <button id="no">Ne</button>
+</div>
+
+<script>
+const noBtn = document.getElementById("no");
+
+noBtn.addEventListener("mouseover", move);
+noBtn.addEventListener("touchstart", move);
+
+function move() {
+    const x = Math.random() * 200 - 100;
+    const y = Math.random() * 200 - 50;
+    noBtn.style.transform = `translate(${x}px, ${y}px)`;
+}
+</script>
+
+</body>
+</html>
